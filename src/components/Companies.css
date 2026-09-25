@@ -1,0 +1,859 @@
+/* =====================================================
+   COMPANIES SECTION
+===================================================== */
+
+.companies-section {
+  width: 100%;
+  min-height: 500px;
+
+  padding: 100px 20px 80px;
+
+  background: #000;
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.companies-content {
+  width: 100%;
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.companies-content h2 {
+  margin: 0;
+
+  color: #f5f5f5;
+
+  font-family: "Audiowide", cursive;
+
+  font-size: clamp(27px, 3.2vw, 40px);
+
+  font-weight: 400;
+
+  line-height: 1.2;
+
+  letter-spacing: -1px;
+}
+
+.companies-content h2 span {
+  font-family: "Audiowide", cursive;
+}
+
+
+/* =====================================================
+   MARQUEE WINDOW
+===================================================== */
+
+.companies-marquee {
+  width: 100%;
+
+  max-width: 1000px;
+
+  margin: 60px auto 55px;
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+
+/* =====================================================
+   MOVING TRACK
+===================================================== */
+
+.companies-track {
+  display: flex;
+
+  align-items: center;
+
+  width: max-content;
+
+  will-change: transform;
+
+  animation: companiesMove 32s linear infinite;
+}
+
+
+/* =====================================================
+   COMPANY GROUP
+
+   IMPORTANT:
+   No fixed width here.
+   This prevents overlap.
+===================================================== */
+
+.companies-group {
+  display: flex;
+
+  align-items: center;
+
+  width: max-content;
+
+  min-width: max-content;
+
+  flex: 0 0 auto;
+
+  gap: 65px;
+
+  padding: 0 30px;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   COMPANY LOGOS
+===================================================== */
+
+/* =====================================================
+   COMPANY LOGOS
+===================================================== */
+
+.company-logo {
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  white-space: nowrap;
+
+  line-height: 1;
+
+  text-shadow: 0 0 18px rgba(255, 255, 255, 0.04);
+}
+
+
+/* =====================================================
+   GOOGLE
+===================================================== */
+
+.company-logo.google {
+  font-size: 50px;
+  font-weight: 600;
+  letter-spacing: -3px;
+
+  background: linear-gradient(
+    90deg,
+    #4285f4 0%,
+    #34a853 32%,
+    #fbbc05 62%,
+    #ea4335 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* =====================================================
+   FACEBOOK
+===================================================== */
+
+.company-logo.facebook {
+  width: 58px;
+  height: 58px;
+
+  flex: 0 0 58px;
+
+  border-radius: 50%;
+
+  background: #1877f2;
+
+  color: #ffffff;
+
+  font-size: 45px;
+  font-weight: 700;
+
+  line-height: 1;
+}
+
+
+/* =====================================================
+   AMAZON
+===================================================== */
+
+.company-logo.amazon {
+  color: #ffffff;
+
+  font-size: 45px;
+  font-weight: 700;
+
+  letter-spacing: -3px;
+
+  text-shadow:
+    0 0 12px rgba(255, 255, 255, 0.08);
+}
+
+
+/* =====================================================
+   APPLE
+===================================================== */
+
+.company-logo.apple {
+  color: #f5f5f7;
+
+  font-size: 55px;
+  font-weight: 400;
+
+  text-shadow:
+    0 0 15px rgba(255, 255, 255, 0.12);
+}
+
+
+/* =====================================================
+   NETFLIX
+===================================================== */
+
+.company-logo.netflix {
+  color: #e50914;
+
+  font-size: 48px;
+  font-weight: 900;
+
+  letter-spacing: -2px;
+
+  text-shadow:
+    0 0 16px rgba(229, 9, 20, 0.18);
+}
+
+
+/* =====================================================
+   CISCO
+===================================================== */
+
+.company-logo.cisco {
+  color: #00bceb;
+
+  font-size: 40px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  text-shadow:
+    0 0 15px rgba(0, 188, 235, 0.2);
+}
+
+
+/* =====================================================
+   PAYPAL
+===================================================== */
+
+.company-logo.paypal {
+  color: #0070ba;
+
+  font-size: 44px;
+  font-style: italic;
+  font-weight: 800;
+
+  letter-spacing: -3px;
+
+  text-shadow:
+    0 0 15px rgba(0, 112, 186, 0.2);
+}
+
+
+/* =====================================================
+   ORACLE
+===================================================== */
+
+.company-logo.oracle {
+  color: #f80000;
+
+  font-size: 45px;
+  font-weight: 800;
+
+  letter-spacing: -2px;
+
+  text-shadow:
+    0 0 15px rgba(248, 0, 0, 0.15);
+}
+
+
+/* =====================================================
+   MICROSOFT
+===================================================== */
+
+.company-logo.microsoft {
+  color: #f2f2f2;
+
+  font-size: 38px;
+  font-weight: 700;
+
+  letter-spacing: -1px;
+}
+
+
+/* =====================================================
+   META
+===================================================== */
+
+.company-logo.meta {
+  color: #0081fb;
+
+  font-size: 45px;
+  font-weight: 800;
+
+  letter-spacing: -2px;
+
+  text-shadow:
+    0 0 15px rgba(0, 129, 251, 0.18);
+}
+
+
+/* =====================================================
+   ADOBE
+===================================================== */
+
+.company-logo.adobe {
+  color: #ff0000;
+
+  font-size: 45px;
+  font-weight: 800;
+
+  letter-spacing: -2px;
+
+  text-shadow:
+    0 0 15px rgba(255, 0, 0, 0.15);
+}
+
+
+/* =====================================================
+   IBM
+===================================================== */
+
+.company-logo.ibm {
+  color: #4589ff;
+
+  font-size: 48px;
+  font-weight: 900;
+
+  letter-spacing: 3px;
+
+  text-shadow:
+    0 0 15px rgba(69, 137, 255, 0.2);
+}
+
+
+/* =====================================================
+   LOGO GROUP
+===================================================== */
+
+.companies-group {
+  display: flex;
+
+  align-items: center;
+
+  width: max-content;
+  min-width: max-content;
+
+  flex: 0 0 auto;
+
+  gap: 75px;
+
+  padding: 0 35px;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+  .companies-group {
+    gap: 45px;
+    padding: 0 20px;
+  }
+
+  .company-logo.google {
+    font-size: 36px;
+  }
+
+  .company-logo.facebook {
+    width: 45px;
+    height: 45px;
+
+    flex-basis: 45px;
+
+    font-size: 35px;
+  }
+
+  .company-logo.amazon {
+    font-size: 33px;
+  }
+
+  .company-logo.apple {
+    font-size: 41px;
+  }
+
+  .company-logo.netflix {
+    font-size: 36px;
+  }
+
+  .company-logo.cisco {
+    font-size: 30px;
+  }
+
+  .company-logo.paypal {
+    font-size: 33px;
+  }
+
+  .company-logo.oracle {
+    font-size: 34px;
+  }
+
+  .company-logo.microsoft {
+    font-size: 29px;
+  }
+
+  .company-logo.meta {
+    font-size: 34px;
+  }
+
+  .company-logo.adobe {
+    font-size: 34px;
+  }
+
+  .company-logo.ibm {
+    font-size: 37px;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+  .companies-group {
+    gap: 35px;
+    padding: 0 15px;
+  }
+
+  .company-logo.google {
+    font-size: 32px;
+  }
+
+  .company-logo.facebook {
+    width: 40px;
+    height: 40px;
+
+    flex-basis: 40px;
+
+    font-size: 31px;
+  }
+
+  .company-logo.amazon {
+    font-size: 29px;
+  }
+
+  .company-logo.apple {
+    font-size: 37px;
+  }
+
+  .company-logo.netflix {
+    font-size: 32px;
+  }
+
+  .company-logo.cisco {
+    font-size: 27px;
+  }
+
+  .company-logo.paypal {
+    font-size: 30px;
+  }
+
+  .company-logo.oracle {
+    font-size: 31px;
+  }
+
+  .company-logo.microsoft {
+    font-size: 26px;
+  }
+
+  .company-logo.meta {
+    font-size: 31px;
+  }
+
+  .company-logo.adobe {
+    font-size: 31px;
+  }
+
+  .company-logo.ibm {
+    font-size: 34px;
+  }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+  .companies-group {
+    gap: 35px;
+
+    padding: 0 20px;
+  }
+
+  .company-logo.google {
+    font-size: 32px;
+  }
+
+  .company-logo.facebook {
+    width: 42px;
+    height: 42px;
+
+    flex: 0 0 42px;
+
+    font-size: 33px;
+  }
+
+  .company-logo.amazon {
+    font-size: 30px;
+  }
+
+  .company-logo.apple {
+    font-size: 38px;
+  }
+
+  .company-logo.netflix {
+    font-size: 32px;
+  }
+
+  .company-logo.cisco {
+    font-size: 28px;
+  }
+
+  .company-logo.paypal {
+    font-size: 30px;
+  }
+
+  .company-logo.oracle {
+    font-size: 32px;
+  }
+
+  .company-logo.microsoft {
+    font-size: 27px;
+  }
+
+  .company-logo.meta {
+    font-size: 30px;
+  }
+
+  .company-logo.adobe {
+    font-size: 30px;
+  }
+
+  .company-logo.ibm {
+    font-size: 32px;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+  .companies-group {
+    gap: 28px;
+
+    padding: 0 15px;
+  }
+
+  .company-logo.google {
+    font-size: 29px;
+  }
+
+  .company-logo.facebook {
+    width: 38px;
+    height: 38px;
+
+    flex-basis: 38px;
+
+    font-size: 30px;
+  }
+
+  .company-logo.amazon {
+    font-size: 27px;
+  }
+
+  .company-logo.apple {
+    font-size: 34px;
+  }
+
+  .company-logo.netflix {
+    font-size: 29px;
+  }
+
+  .company-logo.cisco {
+    font-size: 25px;
+  }
+
+  .company-logo.paypal {
+    font-size: 27px;
+  }
+
+  .company-logo.oracle {
+    font-size: 29px;
+  }
+
+  .company-logo.microsoft {
+    font-size: 24px;
+  }
+
+  .company-logo.meta {
+    font-size: 27px;
+  }
+
+  .company-logo.adobe {
+    font-size: 27px;
+  }
+
+  .company-logo.ibm {
+    font-size: 29px;
+  }
+}
+
+/* =====================================================
+   IBM
+===================================================== */
+
+.company-logo.ibm {
+  color: #4d8cff;
+
+  font-size: 37px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+/* =====================================================
+   MARQUEE ANIMATION
+
+   Moves exactly one complete group.
+===================================================== */
+
+@keyframes companiesMove {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* Pause on hover */
+
+.companies-marquee:hover .companies-track {
+  animation-play-state: paused;
+}
+
+
+/* =====================================================
+   GO AHEAD BUTTON
+===================================================== */
+
+.companies-button {
+  min-width: 135px;
+
+  padding: 14px 25px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #29292d;
+
+  color: #fff;
+
+  font-family:
+    "Gilroy",
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.companies-button:hover {
+  background: #38383d;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.08);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .companies-section {
+    padding: 90px 20px 70px;
+  }
+
+  .companies-content h2 {
+    font-size: 36px;
+  }
+
+  .companies-group {
+    gap: 50px;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+  .companies-section {
+    min-height: auto;
+
+    padding: 80px 15px 65px;
+  }
+
+  .companies-content h2 {
+    margin: 0 10px;
+
+    font-size: 29px;
+
+    line-height: 1.25;
+
+    letter-spacing: -0.5px;
+  }
+
+  .companies-marquee {
+    max-width: 100%;
+
+    margin: 45px auto 50px;
+  }
+
+  .companies-track {
+    animation-duration: 25s;
+  }
+
+  .companies-group {
+    gap: 35px;
+
+    padding: 0 20px;
+  }
+
+  .company-logo.google {
+    font-size: 28px;
+  }
+
+  .company-logo.facebook {
+    width: 38px;
+    height: 38px;
+
+    font-size: 30px;
+  }
+
+  .company-logo.amazon {
+    font-size: 26px;
+  }
+
+  .company-logo.apple {
+    font-size: 34px;
+  }
+
+  .company-logo.netflix {
+    font-size: 28px;
+  }
+
+  .company-logo.cisco {
+    font-size: 24px;
+  }
+
+  .company-logo.paypal {
+    font-size: 26px;
+  }
+
+  .company-logo.oracle {
+    font-size: 28px;
+  }
+
+  .company-logo.microsoft {
+    font-size: 24px;
+  }
+
+  .company-logo.meta {
+    font-size: 28px;
+  }
+
+  .company-logo.adobe {
+    font-size: 28px;
+  }
+
+  .company-logo.ibm {
+    font-size: 30px;
+  }
+
+  .companies-button {
+    min-width: 120px;
+
+    padding: 12px 22px;
+
+    font-size: 14px;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+  .companies-content h2 {
+    font-size: 25px;
+  }
+
+  .companies-group {
+    gap: 28px;
+
+    padding: 0 15px;
+  }
+
+}

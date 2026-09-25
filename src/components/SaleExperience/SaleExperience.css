@@ -1,0 +1,1974 @@
+/* =========================================================
+STRIKE AI SALE EXPERIENCE
+========================================================= */
+
+.ai-sale {
+position: fixed;
+right: 48px;
+bottom: 92px;
+
+width: auto;
+min-height: 0;
+
+z-index: 9999;
+pointer-events: none;
+
+font-family:
+"Gilroy",
+"Inter",
+-apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+sans-serif;
+}
+
+/* =========================================================
+SIGNAL TRIGGER
+========================================================= */
+
+.ai-signal-trigger {
+position: relative;
+
+width: 250px;
+min-height: 72px;
+
+display: flex;
+align-items: center;
+gap: 14px;
+
+padding: 14px 16px;
+
+box-sizing: border-box;
+
+border: 1px solid rgba(164, 108, 255, 0.85);
+border-radius: 18px;
+
+background:
+linear-gradient(
+135deg,
+rgba(35, 23, 55, 0.98),
+rgba(12, 10, 20, 0.99)
+);
+
+color: #ffffff;
+
+cursor: pointer;
+pointer-events: auto;
+
+box-shadow:
+0 18px 45px rgba(0, 0, 0, 0.65),
+0 0 18px rgba(145, 75, 255, 0.28),
+0 0 45px rgba(145, 75, 255, 0.14);
+
+overflow: hidden;
+
+transition:
+transform 0.3s ease,
+border-color 0.3s ease,
+box-shadow 0.3s ease;
+}
+
+.ai-signal-trigger {
+transform: translateY(-3px);
+
+border-color: #b889ff;
+
+box-shadow:
+0 22px 55px rgba(0, 0, 0, 0.7),
+0 0 25px rgba(145, 75, 255, 0.4),
+0 0 55px rgba(145, 75, 255, 0.2);
+}
+
+/* =========================================================
+SIGNAL CORE
+========================================================= */
+
+.signal-core {
+position: relative;
+
+width: 46px;
+height: 46px;
+
+flex-shrink: 0;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+border: 1px solid rgba(175, 115, 255, 0.95);
+border-radius: 50%;
+
+background:
+radial-gradient(
+circle,
+rgba(145, 75, 255, 0.48),
+rgba(25, 12, 45, 0.9)
+);
+
+box-shadow:
+inset 0 0 18px rgba(145, 75, 255, 0.2),
+0 0 20px rgba(145, 75, 255, 0.28),
+0 0 35px rgba(145, 75, 255, 0.12);
+
+z-index: 3;
+}
+
+/* =========================================================
+CORE DOT
+========================================================= */
+
+.core-dot {
+width: 11px;
+height: 11px;
+
+border-radius: 50%;
+
+background: #b784ff;
+
+box-shadow:
+0 0 12px #a66cff,
+0 0 25px rgba(166, 108, 255, 0.95),
+0 0 40px rgba(166, 108, 255, 0.45);
+
+animation:
+corePulse 1.8s ease-in-out infinite;
+}
+
+@keyframes corePulse {
+0%,
+100% {
+transform: scale(1);
+opacity: 0.8;
+}
+
+50% {
+transform: scale(1.35);
+opacity: 1;
+}
+}
+
+/* =========================================================
+SIGNAL ORBITS
+========================================================= */
+
+.signal-orbit {
+position: absolute;
+
+width: 50px;
+height: 50px;
+
+border: 1px solid rgba(165, 100, 255, 0.38);
+border-radius: 50%;
+
+pointer-events: none;
+
+z-index: 1;
+}
+
+.orbit-one {
+left: 14px;
+top: 11px;
+
+animation:
+orbitPulse 2s ease-in-out infinite;
+}
+
+.orbit-two {
+width: 62px;
+height: 62px;
+
+left: 8px;
+top: 5px;
+
+border-color: rgba(165, 100, 255, 0.2);
+
+animation:
+orbitPulse 2s ease-in-out infinite 0.4s;
+}
+
+@keyframes orbitPulse {
+0%,
+100% {
+transform: scale(0.92);
+opacity: 0.35;
+}
+
+50% {
+transform: scale(1.08);
+opacity: 0.8;
+}
+}
+
+/* =========================================================
+SIGNAL TEXT
+========================================================= */
+
+.signal-text {
+display: flex;
+flex-direction: column;
+gap: 5px;
+
+min-width: 0;
+
+text-align: left;
+
+z-index: 3;
+}
+
+.signal-text small {
+display: block;
+
+color: #b987ff;
+
+font-size: 9px;
+font-weight: 800;
+
+letter-spacing: 1.8px;
+line-height: 1;
+}
+
+.signal-text strong {
+display: block;
+
+color: #ffffff;
+
+font-size: 14px;
+font-weight: 750;
+
+line-height: 1.2;
+
+white-space: nowrap;
+}
+
+/* =========================================================
+SIGNAL ARROW
+========================================================= */
+
+.signal-arrow {
+margin-left: auto;
+
+flex-shrink: 0;
+
+color: #c092ff;
+
+font-size: 19px;
+font-weight: 400;
+
+line-height: 1;
+
+z-index: 3;
+
+transition:
+transform 0.25s ease,
+color 0.25s ease;
+}
+
+.ai-signal-trigger .signal-arrow {
+color: #e0c7ff;
+
+transform: translate(4px, -4px);
+}
+
+/* =========================================================
+SCANNING
+========================================================= */
+
+.ai-scanning {
+width: 340px;
+min-height: 90px;
+
+display: flex;
+align-items: center;
+gap: 15px;
+
+padding: 17px 18px;
+
+box-sizing: border-box;
+
+border: 1px solid rgba(164, 108, 255, 0.7);
+border-radius: 18px;
+
+background:
+linear-gradient(
+135deg,
+rgba(30, 20, 48, 0.99),
+rgba(9, 9, 15, 0.99)
+);
+
+box-shadow:
+0 20px 50px rgba(0, 0, 0, 0.65),
+0 0 40px rgba(130, 65, 255, 0.18);
+
+pointer-events: auto;
+
+animation:
+salePanelIn 0.35s ease forwards;
+}
+
+.scanner-icon {
+position: relative;
+
+width: 45px;
+height: 45px;
+
+flex-shrink: 0;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+border: 1px solid rgba(153, 85, 255, 0.8);
+border-radius: 50%;
+
+box-shadow:
+0 0 20px rgba(145, 75, 255, 0.15);
+}
+
+.scanner-icon::before {
+content: "";
+
+position: absolute;
+
+width: 27px;
+height: 27px;
+
+border: 1px solid rgba(153, 85, 255, 0.35);
+border-radius: 50%;
+}
+
+.scanner-icon span {
+width: 9px;
+height: 9px;
+
+border-radius: 50%;
+
+background: #a86cff;
+
+box-shadow:
+0 0 15px #9a5cff;
+
+animation:
+scannerPulse 0.8s ease-in-out infinite;
+}
+
+@keyframes scannerPulse {
+0%,
+100% {
+transform: scale(0.8);
+}
+
+50% {
+transform: scale(1.35);
+}
+}
+
+.scanner-content {
+flex: 1;
+
+display: flex;
+flex-direction: column;
+
+gap: 5px;
+}
+
+.scanner-label {
+color: #b987ff;
+
+font-size: 9px;
+font-weight: 800;
+
+letter-spacing: 1.8px;
+}
+
+.scanner-content strong {
+color: #ffffff;
+
+font-size: 13px;
+font-weight: 700;
+}
+
+.scanner-progress {
+width: 100%;
+height: 3px;
+
+margin-top: 5px;
+
+overflow: hidden;
+
+border-radius: 10px;
+
+background: #29202f;
+}
+
+.scanner-progress span {
+display: block;
+
+width: 40%;
+height: 100%;
+
+border-radius: 10px;
+
+background: #a46cff;
+
+box-shadow:
+0 0 10px rgba(164, 108, 255, 0.8);
+
+animation:
+scanProgress 0.85s linear forwards;
+}
+
+@keyframes scanProgress {
+from {
+transform: translateX(-120%);
+}
+
+to {
+transform: translateX(250%);
+}
+}
+
+.scanner-status {
+color: #888;
+
+font-size: 8px;
+font-weight: 700;
+
+letter-spacing: 1px;
+
+white-space: nowrap;
+}
+
+/* =========================================================
+DETECTED
+========================================================= */
+
+.ai-detected {
+width: 310px;
+min-height: 82px;
+
+display: flex;
+align-items: center;
+gap: 15px;
+
+padding: 16px 18px;
+
+box-sizing: border-box;
+
+border: 1px solid rgba(164, 108, 255, 0.75);
+border-radius: 18px;
+
+background:
+linear-gradient(
+135deg,
+rgba(30, 21, 48, 0.99),
+rgba(9, 9, 15, 0.99)
+);
+
+box-shadow:
+0 20px 50px rgba(0, 0, 0, 0.65),
+0 0 45px rgba(130, 65, 255, 0.18);
+
+pointer-events: auto;
+
+animation:
+salePanelIn 0.35s ease forwards;
+}
+
+.detected-icon {
+width: 45px;
+height: 45px;
+
+flex-shrink: 0;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+border: 1px solid rgba(164, 108, 255, 0.8);
+border-radius: 50%;
+
+color: #c092ff;
+
+font-size: 20px;
+
+background:
+rgba(130, 60, 255, 0.14);
+
+box-shadow:
+0 0 25px rgba(130, 60, 255, 0.2);
+}
+
+.detected-content {
+flex: 1;
+
+display: flex;
+flex-direction: column;
+
+gap: 5px;
+}
+
+.detected-content span {
+color: #b987ff;
+
+font-size: 8px;
+font-weight: 800;
+
+letter-spacing: 1.5px;
+}
+
+.detected-content strong {
+color: #ffffff;
+
+font-size: 15px;
+font-weight: 700;
+}
+
+.detected-check {
+width: 25px;
+height: 25px;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+border: 1px solid rgba(0, 255, 170, 0.45);
+border-radius: 50%;
+
+color: #00e6a0;
+
+font-size: 12px;
+
+background:
+rgba(0, 230, 160, 0.08);
+}
+
+/* =========================================================
+OFFER PANEL
+========================================================= */
+
+.ai-offer-panel {
+position: relative;
+
+width: 360px;
+
+padding: 22px;
+
+box-sizing: border-box;
+
+overflow: hidden;
+
+border: 1px solid rgba(164, 108, 255, 0.75);
+border-radius: 20px;
+
+background:
+linear-gradient(
+145deg,
+rgba(25, 17, 40, 0.99),
+rgba(8, 8, 12, 0.99)
+);
+
+box-shadow:
+0 25px 70px rgba(0, 0, 0, 0.7),
+0 0 50px rgba(125, 60, 255, 0.18);
+
+pointer-events: auto;
+
+animation:
+offerReveal 0.45s
+cubic-bezier(0.22, 0.61, 0.36, 1)
+forwards;
+}
+
+.offer-grid {
+position: absolute;
+
+inset: 0;
+
+pointer-events: none;
+
+opacity: 0.12;
+
+background-image:
+linear-gradient(
+rgba(160, 100, 255, 0.15) 1px,
+transparent 1px
+),
+linear-gradient(
+90deg,
+rgba(160, 100, 255, 0.15) 1px,
+transparent 1px
+);
+
+background-size: 24px 24px;
+
+mask-image:
+linear-gradient(
+to bottom,
+black,
+transparent
+);
+}
+
+.offer-glow {
+position: absolute;
+
+width: 220px;
+height: 220px;
+
+top: -120px;
+right: -80px;
+
+border-radius: 50%;
+
+background:
+rgba(130, 65, 255, 0.18);
+
+filter: blur(50px);
+
+pointer-events: none;
+}
+
+/* =========================================================
+OFFER CLOSE
+========================================================= */
+
+.ai-offer-close {
+position: absolute;
+
+top: 10px;
+right: 10px;
+
+width: 25px;
+height: 25px;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+padding: 0;
+
+border: 1px solid rgba(237, 0, 11, 0.45);
+border-radius: 50%;
+
+background:
+rgba(237, 0, 11, 0.1);
+
+color: #ff3038;
+
+font-family: Arial, sans-serif;
+font-size: 17px;
+font-weight: 700;
+
+line-height: 1;
+
+cursor: pointer;
+
+z-index: 10;
+
+transition:
+background 0.2s ease,
+color 0.2s ease,
+transform 0.2s ease;
+}
+
+.ai-offer-close {
+color: #ffffff;
+
+background: #ed000b;
+
+transform: scale(1.08);
+}
+
+/* =========================================================
+OFFER HEADER
+========================================================= */
+
+.ai-offer-header {
+position: relative;
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+gap: 10px;
+
+margin-bottom: 20px;
+
+padding-right: 30px;
+}
+
+.ai-status {
+display: flex;
+align-items: center;
+
+gap: 7px;
+
+color: #b784ff;
+
+font-size: 9px;
+font-weight: 800;
+
+letter-spacing: 1.3px;
+}
+
+.status-dot {
+width: 6px;
+height: 6px;
+
+border-radius: 50%;
+
+background: #00e6a0;
+
+box-shadow:
+0 0 9px rgba(0, 230, 160, 0.8);
+}
+
+.ai-code {
+color: #666;
+
+font-family:
+"Courier New",
+monospace;
+
+font-size: 8px;
+
+letter-spacing: 0.8px;
+}
+
+/* =========================================================
+OFFER TITLE
+========================================================= */
+
+.ai-offer-title {
+position: relative;
+
+display: flex;
+flex-direction: column;
+
+gap: 4px;
+
+margin-bottom: 22px;
+}
+
+.ai-offer-title span {
+color: #777;
+
+font-size: 9px;
+font-weight: 700;
+
+letter-spacing: 1.4px;
+}
+
+.ai-offer-title strong {
+color: #f4f4f4;
+
+font-size: 24px;
+font-weight: 800;
+
+line-height: 1.1;
+
+letter-spacing: -0.6px;
+}
+
+/* =========================================================
+DISCOUNT
+========================================================= */
+
+.ai-discount {
+position: relative;
+
+display: flex;
+align-items: center;
+
+gap: 14px;
+
+margin-bottom: 20px;
+}
+
+.discount-line {
+flex: 1;
+
+height: 1px;
+
+background:
+linear-gradient(
+90deg,
+transparent,
+rgba(164, 108, 255, 0.55),
+transparent
+);
+}
+
+.discount-content {
+text-align: center;
+}
+
+.discount-content small {
+display: block;
+
+margin-bottom: 5px;
+
+color: #b987ff;
+
+font-size: 8px;
+font-weight: 800;
+
+letter-spacing: 1.4px;
+}
+
+.discount-content strong {
+display: block;
+
+color: #ffffff;
+
+font-size: 42px;
+font-weight: 900;
+
+line-height: 0.9;
+
+letter-spacing: -2px;
+}
+
+.discount-content strong span {
+margin-left: 4px;
+
+color: #b987ff;
+
+font-size: 17px;
+
+letter-spacing: 0;
+}
+
+.discount-content p {
+margin: 8px 0 0;
+
+color: #888;
+
+font-size: 9px;
+}
+
+/* =========================================================
+COUPON
+========================================================= */
+
+.ai-coupon {
+display: flex;
+align-items: stretch;
+
+width: 100%;
+height: 52px;
+
+margin-bottom: 15px;
+
+border: 1px dashed #5a486b;
+border-radius: 10px;
+
+background: rgba(5, 5, 8, 0.85);
+
+overflow: hidden;
+}
+
+.coupon-info {
+flex: 1;
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+
+padding: 0 14px;
+}
+
+.coupon-info small {
+margin-bottom: 4px;
+
+color: #777;
+
+font-size: 7px;
+font-weight: 800;
+
+letter-spacing: 1.2px;
+}
+
+.coupon-info strong {
+color: #eeeeee;
+
+font-family:
+"Courier New",
+monospace;
+
+font-size: 14px;
+font-weight: 700;
+
+letter-spacing: 1.5px;
+}
+
+.ai-coupon button {
+min-width: 72px;
+
+border: 0;
+border-left: 1px solid #333;
+
+background: #17131e;
+
+color: #b987ff;
+
+font-size: 9px;
+font-weight: 800;
+
+cursor: pointer;
+
+transition:
+background 0.2s ease,
+color 0.2s ease;
+}
+
+.ai-coupon button:hover {
+color: #ffffff;
+
+background: #29212f;
+}
+
+.ai-coupon button:not(:disabled) {
+  color: #b987ff;
+  cursor: pointer;
+}
+
+.ai-coupon button:disabled {
+  color: #555;
+  cursor: not-allowed;
+}
+/* =========================================================
+EXPIRY
+========================================================= */
+
+.ai-expiry {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+
+  margin-bottom: 15px;
+  padding: 12px 14px;
+
+  border: 1px solid rgba(164, 108, 255, 0.65);
+  border-radius: 11px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(145, 75, 255, 0.16),
+      rgba(145, 75, 255, 0.05)
+    );
+
+  box-shadow:
+    0 0 20px rgba(145, 75, 255, 0.16),
+    inset 0 0 18px rgba(145, 75, 255, 0.06);
+}
+
+.ai-expiry > span {
+  color: #b987ff;
+
+  font-size: 9px;
+  font-weight: 900;
+
+  letter-spacing: 1.2px;
+}
+
+.ai-expiry strong {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 126px;
+  padding: 7px 10px;
+
+  border: 1px solid rgba(185, 135, 255, 0.45);
+  border-radius: 7px;
+
+  background: rgba(145, 75, 255, 0.14);
+
+  color: #ffffff;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size: 22px;
+  font-weight: 900;
+
+  line-height: 1;
+
+  letter-spacing: 1.5px;
+
+  text-shadow:
+    0 0 8px rgba(185, 135, 255, 0.9),
+    0 0 18px rgba(145, 75, 255, 0.55);
+
+  box-shadow:
+    0 0 14px rgba(145, 75, 255, 0.18);
+
+  animation: timerGlow 1.4s ease-in-out infinite;
+}
+
+.ai-expiry strong i {
+  color: #b987ff;
+  font-style: normal;
+}
+
+.ai-expiry .expired {
+  color: #ed000b;
+
+  font-family:
+    "Gilroy",
+    "Inter",
+    sans-serif;
+
+  font-size: 10px;
+}
+
+/* TIMER ATTENTION */
+
+@keyframes timerGlow {
+  0%,
+  100% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.045);
+  }
+}
+
+/* =========================================================
+LARGE COUNTDOWN
+========================================================= */
+
+.ai-countdown {
+width: 100%;
+margin: 18px 0 16px;
+padding: 16px 12px 14px;
+
+box-sizing: border-box;
+
+border: 1px solid rgba(164, 108, 255, 0.65);
+border-radius: 13px;
+
+background:
+radial-gradient(
+circle at 50% 50%,
+rgba(145, 75, 255, 0.16),
+transparent 72%
+),
+rgba(8, 8, 12, 0.9);
+
+box-shadow:
+0 0 20px rgba(145, 75, 255, 0.12),
+inset 0 0 20px rgba(145, 75, 255, 0.05);
+
+text-align: center;
+}
+
+.countdown-label {
+display: block;
+
+margin-bottom: 12px;
+
+color: #b987ff;
+
+font-size: 9px;
+font-weight: 900;
+
+letter-spacing: 1.6px;
+}
+
+.countdown-time {
+display: flex;
+align-items: center;
+justify-content: center;
+
+gap: 7px;
+
+white-space: nowrap;
+}
+
+.countdown-time > div {
+min-width: 68px;
+
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.countdown-time strong {
+display: block;
+
+color: #ffffff;
+
+font-family:
+"Courier New",
+monospace;
+
+font-size: 30px;
+font-weight: 900;
+
+line-height: 1;
+
+letter-spacing: 1px;
+
+text-shadow:
+0 0 10px rgba(185, 135, 255, 0.75),
+0 0 24px rgba(145, 75, 255, 0.35);
+
+animation: countdownPulse 1.5s ease-in-out infinite;
+}
+
+.countdown-time small {
+display: block;
+
+margin-top: 6px;
+
+color: #777;
+
+font-size: 8px;
+font-weight: 800;
+
+letter-spacing: 1px;
+}
+
+.countdown-time > span {
+display: block;
+
+margin-top: -9px;
+
+color: #b987ff;
+
+font-family:
+"Courier New",
+monospace;
+
+font-size: 22px;
+font-weight: 800;
+}
+
+.sale-expired {
+display: block;
+
+color: #ed000b;
+
+font-size: 14px;
+font-weight: 900;
+
+letter-spacing: 1.2px;
+}
+
+.countdown-running {
+display: flex;
+align-items: center;
+justify-content: center;
+
+gap: 7px;
+
+margin-top: 11px;
+
+color: #777;
+
+font-size: 7px;
+font-weight: 800;
+
+letter-spacing: 1.2px;
+}
+
+.countdown-running span {
+width: 5px;
+height: 5px;
+
+border-radius: 50%;
+
+background: #00e6a0;
+
+box-shadow:
+0 0 8px rgba(0, 230, 160, 0.9);
+
+animation: countdownStatusPulse 1.2s ease-in-out infinite;
+}
+
+@keyframes countdownPulse {
+0%,
+100% {
+transform: scale(1);
+text-shadow:
+0 0 10px rgba(185, 135, 255, 0.75),
+0 0 24px rgba(145, 75, 255, 0.35);
+}
+
+50% {
+transform: scale(1.045);
+text-shadow:
+0 0 14px rgba(185, 135, 255, 0.95),
+0 0 30px rgba(145, 75, 255, 0.5);
+}
+}
+
+@keyframes countdownStatusPulse {
+0%,
+100% {
+opacity: 0.45;
+transform: scale(0.85);
+}
+
+50% {
+opacity: 1;
+transform: scale(1.15);
+}
+}
+
+/* =========================================================
+CLAIM BUTTON
+========================================================= */
+
+.ai-claim {
+width: 100%;
+height: 48px;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+gap: 10px;
+
+border: 1px solid rgba(173, 120, 255, 0.8);
+border-radius: 10px;
+
+background:
+linear-gradient(
+90deg,
+#9d61f5,
+#bd8aff
+);
+
+color: #100b18;
+
+font-size: 11px;
+font-weight: 900;
+
+cursor: pointer;
+
+transition:
+transform 0.25s ease,
+box-shadow 0.25s ease;
+}
+
+.ai-claim:hover:not(:disabled) {
+transform: translateY(-2px);
+
+box-shadow:
+0 10px 30px rgba(155, 90, 255, 0.25);
+}
+
+.ai-claim strong {
+font-size: 17px;
+font-weight: 500;
+
+transition:
+transform 0.25s ease;
+}
+
+.ai-claim:hover:not(:disabled) strong {
+transform: translateX(4px);
+}
+
+.ai-claim:disabled {
+background: #25222a;
+border-color: #333;
+color: #666;
+cursor: not-allowed;
+opacity: 0.7;
+}
+
+.ai-claim:not(:disabled) {
+background:
+linear-gradient(
+90deg,
+#9d61f5,
+#bd8aff
+);
+
+border-color: rgba(173, 120, 255, 0.8);
+color: #100b18;
+cursor: pointer;
+opacity: 1;
+}
+
+/* =========================================================
+OFFER FOOTER
+========================================================= */
+
+.ai-footer {
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+gap: 10px;
+
+margin-top: 13px;
+
+color: #555;
+
+font-size: 7px;
+font-weight: 800;
+
+letter-spacing: 0.8px;
+}
+
+.ai-footer span {
+color: #00b982;
+}
+
+/* =========================================================
+ANIMATIONS
+========================================================= */
+
+@keyframes salePanelIn {
+from {
+opacity: 0;
+transform:
+translateY(12px)
+scale(0.96);
+}
+
+to {
+opacity: 1;
+transform:
+translateY(0)
+scale(1);
+}
+}
+
+@keyframes offerReveal {
+from {
+opacity: 0;
+transform:
+translateY(20px)
+scale(0.96);
+}
+
+to {
+opacity: 1;
+transform:
+translateY(0)
+scale(1);
+}
+}
+
+/* =========================================================
+   FINAL MOBILE SALE EXPERIENCE
+   STRIKE AI — COMPACT + PREMIUM
+========================================================= */
+
+@media (max-width: 768px) {
+
+  /* =========================
+     SALE POSITION
+  ========================= */
+
+  .ai-sale {
+    right: 10px;
+    left: 10px;
+    bottom: 12px;
+
+    display: flex;
+    justify-content: flex-end;
+  }
+
+
+  /* =========================
+     SMALL SIGNAL CARD
+  ========================= */
+
+  .ai-signal-trigger {
+    width: 205px;
+    min-height: 58px;
+
+    padding: 9px 11px;
+
+    gap: 9px;
+
+    border-radius: 15px;
+  }
+
+  .signal-core {
+    width: 34px;
+    height: 34px;
+  }
+
+  .orbit-one {
+    left: 8px;
+    top: 6px;
+  }
+
+  .orbit-two {
+    left: 3px;
+    top: 1px;
+  }
+
+  .signal-text {
+    gap: 3px;
+  }
+
+  .signal-text small {
+    font-size: 7px;
+    letter-spacing: 1.2px;
+  }
+
+  .signal-text strong {
+    font-size: 11px;
+    line-height: 1.1;
+  }
+
+  .signal-arrow {
+    font-size: 15px;
+  }
+
+
+  /* =========================
+     SCANNING
+  ========================= */
+
+  .ai-scanning {
+    width: min(310px, calc(100vw - 20px));
+
+    min-height: 76px;
+
+    padding: 12px 13px;
+
+    border-radius: 15px;
+  }
+
+
+  /* =========================
+     DETECTED
+  ========================= */
+
+  .ai-detected {
+    width: min(290px, calc(100vw - 20px));
+
+    min-height: 70px;
+
+    padding: 11px 13px;
+
+    border-radius: 15px;
+  }
+
+
+  /* =========================
+     MAIN OFFER PANEL
+  ========================= */
+
+  .ai-offer-panel {
+    width: min(350px, calc(100vw - 20px));
+
+    max-width: calc(100vw - 20px);
+
+    max-height: calc(100vh - 24px);
+
+    padding: 13px;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+  }
+
+
+  /* =========================
+     HEADER
+  ========================= */
+
+  .ai-offer-header {
+    margin-bottom: 9px;
+
+    padding-right: 27px;
+  }
+
+  .ai-status {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+
+  .ai-code {
+    display: none;
+  }
+
+
+  /* =========================
+     TITLE
+  ========================= */
+
+  .ai-offer-title {
+    gap: 3px;
+
+    margin-bottom: 10px;
+  }
+
+  .ai-offer-title span {
+    font-size: 7px;
+
+    letter-spacing: 1px;
+  }
+
+  .ai-offer-title strong {
+    font-size: 18px;
+
+    line-height: 1.05;
+
+    letter-spacing: -0.3px;
+  }
+
+
+  /* =========================
+     DISCOUNT
+  ========================= */
+
+  .ai-discount {
+    gap: 7px;
+
+    margin-bottom: 10px;
+  }
+
+  .discount-line {
+    opacity: 0.55;
+  }
+
+  .discount-content small {
+    margin-bottom: 2px;
+
+    font-size: 6px;
+
+    letter-spacing: 1px;
+  }
+
+  .discount-content strong {
+    font-size: 29px;
+
+    line-height: 0.95;
+
+    letter-spacing: -1px;
+  }
+
+  .discount-content strong span {
+    font-size: 12px;
+  }
+
+  .discount-content p {
+    margin-top: 4px;
+
+    font-size: 7px;
+  }
+
+
+  /* =========================
+     COUPON
+  ========================= */
+
+  .ai-coupon {
+    height: 39px;
+
+    margin-bottom: 8px;
+
+    border-radius: 7px;
+  }
+
+  .coupon-info {
+    padding: 0 9px;
+  }
+
+  .coupon-info small {
+    margin-bottom: 2px;
+
+    font-size: 5px;
+
+    letter-spacing: 0.9px;
+  }
+
+  .coupon-info strong {
+    font-size: 10px;
+
+    letter-spacing: 1px;
+  }
+
+  .ai-coupon button {
+    min-width: 54px;
+
+    font-size: 7px;
+  }
+
+
+  /* =========================
+     MOBILE TEXT CLEANUP
+  ========================= */
+
+  /*
+     Mobile par duplicate expiry message
+     hide kar rahe hain.
+
+     Main countdown neeche rahega.
+  */
+
+  .ai-expiry {
+    display: none;
+  }
+
+  /*
+     Agar urgency message present hai,
+     use compact rakho.
+  */
+
+  .ai-signal-warning {
+    gap: 2px;
+
+    margin-bottom: 8px;
+  }
+
+  .ai-signal-warning span {
+    font-size: 6px;
+
+    letter-spacing: 0.7px;
+  }
+
+  .ai-signal-warning strong {
+    font-size: 8px;
+
+    letter-spacing: 0.2px;
+  }
+
+
+  /* =========================
+     MAIN COUNTDOWN
+  ========================= */
+
+  .ai-countdown {
+    margin: 8px 0 9px;
+
+    padding: 9px 5px 8px;
+
+    border-radius: 9px;
+  }
+
+  .countdown-label {
+    margin-bottom: 6px;
+
+    font-size: 7px;
+
+    letter-spacing: 1.1px;
+  }
+
+  .countdown-time {
+    gap: 2px;
+  }
+
+  .countdown-time > div {
+    min-width: 39px;
+  }
+
+  .countdown-time strong {
+    font-size: 19px;
+
+    letter-spacing: 0;
+  }
+
+  .countdown-time small {
+    margin-top: 2px;
+
+    font-size: 6px;
+
+    letter-spacing: 0.7px;
+  }
+
+  .countdown-time > span {
+    margin-top: -5px;
+
+    font-size: 12px;
+  }
+
+  .countdown-running {
+    margin-top: 5px;
+
+    gap: 5px;
+
+    font-size: 6px;
+
+    letter-spacing: 0.8px;
+  }
+
+
+  /* =========================
+     CTA
+  ========================= */
+
+  .ai-claim {
+    height: 39px;
+
+    min-height: 39px;
+
+    gap: 6px;
+
+    border-radius: 8px;
+
+    font-size: 8px;
+  }
+
+  .ai-claim strong {
+    font-size: 13px;
+  }
+
+
+  /* =========================
+     FOOTER
+  ========================= */
+
+  .ai-footer {
+    margin-top: 5px;
+
+    font-size: 5px;
+
+    letter-spacing: 0.6px;
+  }
+
+
+  /* =========================
+     CLOSE BUTTON
+  ========================= */
+
+  .ai-offer-close {
+    top: 7px;
+
+    right: 7px;
+
+    width: 21px;
+
+    height: 21px;
+
+    font-size: 14px;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .ai-sale {
+    right: 8px;
+    left: 8px;
+    bottom: 8px;
+  }
+
+
+  .ai-signal-trigger {
+    width: 195px;
+
+    min-height: 55px;
+
+    padding: 8px 10px;
+  }
+
+  .signal-core {
+    width: 32px;
+    height: 32px;
+  }
+
+  .signal-text small {
+    font-size: 6px;
+  }
+
+  .signal-text strong {
+    font-size: 10px;
+  }
+
+  .signal-arrow {
+    font-size: 14px;
+  }
+
+
+  .ai-offer-panel {
+    width: calc(100vw - 16px);
+
+    max-width: calc(100vw - 16px);
+
+    padding: 11px;
+
+    border-radius: 14px;
+  }
+
+
+  .ai-offer-title {
+    margin-bottom: 8px;
+  }
+
+  .ai-offer-title strong {
+    font-size: 17px;
+  }
+
+
+  .discount-content strong {
+    font-size: 27px;
+  }
+
+
+  .ai-coupon {
+    height: 37px;
+  }
+
+  .coupon-info strong {
+    font-size: 9px;
+  }
+
+  .ai-coupon button {
+    min-width: 50px;
+
+    font-size: 6px;
+  }
+
+
+  .ai-countdown {
+    margin: 7px 0 8px;
+
+    padding: 8px 4px 7px;
+  }
+
+  .countdown-label {
+    margin-bottom: 5px;
+
+    font-size: 6px;
+  }
+
+  .countdown-time {
+    gap: 1px;
+  }
+
+  .countdown-time > div {
+    min-width: 34px;
+  }
+
+  .countdown-time strong {
+    font-size: 17px;
+  }
+
+  .countdown-time small {
+    font-size: 5px;
+  }
+
+  .countdown-time > span {
+    font-size: 10px;
+  }
+
+
+  .ai-claim {
+    height: 37px;
+
+    min-height: 37px;
+  }
+
+  .ai-claim strong {
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .ai-signal-trigger,
+  .core-dot,
+  .signal-orbit,
+  .scanner-icon span,
+  .scanner-progress span,
+  .ai-scanning,
+  .ai-detected,
+  .ai-offer-panel {
+    animation: none;
+    transition: none;
+  }
+}
+
+/* =========================================================
+   FINAL AI SALE TEXT SIZE
+========================================================= */
+
+.ai-offer-title strong {
+  font-size: 21px;
+}
+
+.discount-content strong {
+  font-size: 36px;
+  letter-spacing: -1.5px;
+}
+
+.discount-content strong span {
+  font-size: 15px;
+}
+
+.countdown-time strong {
+  font-size: 26px;
+}
+
+.ai-claim strong {
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .ai-offer-title strong {
+    font-size: 18px;
+  }
+
+  .discount-content strong {
+    font-size: 29px;
+  }
+
+  .countdown-time strong {
+    font-size: 19px;
+  }
+
+  .ai-claim strong {
+    font-size: 13px;
+  }
+}
+/* =========================================================
+   DESKTOP COUNTDOWN ONLY
+========================================================= */
+
+@media (min-width: 769px) {
+
+  .countdown-label {
+    font-size: 7px;
+  }
+
+  .countdown-time {
+    gap: 2px;
+  }
+
+  .countdown-time strong {
+    font-size: 20px;
+  }
+
+  .countdown-time small {
+    font-size: 5px;
+  }
+
+  .countdown-time > span {
+    font-size: 11px;
+  }
+}

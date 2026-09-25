@@ -1,0 +1,559 @@
+/* =========================================================
+   NAVBAR WRAPPER
+========================================================= */
+
+.navbar-wrapper {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+
+  width: min(1240px, calc(100% - 40px));
+  max-width: 1240px;
+
+  transform: translateX(-50%);
+
+  z-index: 1000;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+  width: 100%;
+  min-height: 70px;
+
+  padding: 0 26px;
+
+  display: flex;
+  align-items: center;
+
+  background: rgba(17, 17, 17, 0.82);
+
+  border: 1px solid #2a2a2a;
+  border-radius: 40px;
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.25);
+
+  box-sizing: border-box;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+.navbar:hover {
+  background: rgba(19, 19, 19, 0.88);
+  border-color: #343434;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.nav-logo {
+  flex-shrink: 0;
+
+  color: #f5f5f5;
+
+  font-family: "Orbitron", sans-serif;
+
+  font-size: 25px;
+  font-weight: 600;
+
+  line-height: 1;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.nav-logo:hover {
+  opacity: 0.85;
+  transform: scale(1.02);
+}
+
+
+/* =========================================================
+   DESKTOP NAV LINKS
+========================================================= */
+
+.nav-links {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 2px;
+
+  margin-left: 45px;
+}
+
+
+.nav-links a {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 11px 15px;
+
+  border-radius: 25px;
+
+  color: #e1e1e1;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  line-height: 1;
+
+  white-space: nowrap;
+
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+/* HOVER */
+
+.nav-links a:hover {
+  color: #ffffff;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  transform: translateY(-1px);
+}
+
+
+/* ACTIVE */
+
+.nav-links a.active {
+  color: #ffffff;
+
+  background: #484848;
+
+  box-shadow: none;
+}
+
+
+.nav-links a.active:hover {
+  background: #505050;
+}
+
+
+/* =========================================================
+   GET STARTED
+========================================================= */
+
+.nav-actions {
+  flex-shrink: 0;
+
+  margin-left: 20px;
+
+  display: flex;
+  align-items: center;
+}
+
+
+.start-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 11px 18px;
+
+  color: #f5f5f5;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  line-height: 1;
+
+  white-space: nowrap;
+
+  text-decoration: none;
+
+  border-radius: 25px;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.start-btn:hover {
+  color: #ffffff;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.menu-btn {
+  display: none;
+
+  width: 44px;
+  height: 44px;
+
+  padding: 0;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+  border: 1px solid #333;
+
+  border-radius: 50%;
+
+  background: #171717;
+
+  cursor: pointer;
+
+  flex-shrink: 0;
+}
+
+
+.menu-btn span {
+  display: block;
+
+  width: 17px;
+  height: 2px;
+
+  border-radius: 2px;
+
+  background: #ffffff;
+
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+
+/* =========================================================
+   HAMBURGER → X
+========================================================= */
+
+.menu-btn.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+
+.menu-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+
+
+.menu-btn.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.mobile-menu {
+  display: none;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .nav-links {
+    margin-left: 20px;
+  }
+
+  .nav-links a {
+    padding: 10px 10px;
+    font-size: 13px;
+  }
+
+  .nav-actions {
+    margin-left: 10px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  /* NAVBAR POSITION */
+
+  .navbar-wrapper {
+    top: 14px;
+    left: 50%;
+
+    width: calc(100% - 28px);
+    max-width: calc(100% - 28px);
+
+    transform: translateX(-50%);
+  }
+
+
+  /* NAVBAR */
+
+  .navbar {
+    width: 100%;
+
+    min-height: 62px;
+    height: 62px;
+
+    padding: 0 16px;
+
+    justify-content: space-between;
+
+    border-radius: 34px;
+  }
+
+
+  /* LOGO */
+
+  .nav-logo {
+    font-size: 21px;
+  }
+
+
+  /* IMPORTANT:
+     DESKTOP LINKS COMPLETELY HIDDEN
+  */
+
+  .nav-links {
+    display: none !important;
+  }
+
+
+  .nav-actions {
+    display: none !important;
+  }
+
+
+  /* HAMBURGER */
+
+  .menu-btn {
+    display: flex !important;
+  }
+
+
+  /* =====================================================
+     MOBILE DROPDOWN
+  ===================================================== */
+
+  .mobile-menu {
+    position: absolute;
+
+    top: calc(100% + 10px);
+
+    left: 0;
+    right: 0;
+
+    width: 100%;
+
+    padding: 10px;
+
+    display: none;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    background: rgba(17, 17, 17, 0.97);
+
+    border: 1px solid #2a2a2a;
+
+    border-radius: 20px;
+
+    box-sizing: border-box;
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    box-shadow:
+      0 15px 40px rgba(0, 0, 0, 0.45);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(-8px);
+
+    transition:
+      opacity 0.2s ease,
+      transform 0.2s ease,
+      visibility 0.2s ease;
+  }
+
+
+  /* OPEN STATE */
+
+  .mobile-menu.show {
+    display: flex;
+
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+  }
+
+
+  /* MOBILE LINKS */
+
+  .mobile-menu a {
+    display: flex;
+
+    align-items: center;
+
+    width: 100%;
+
+    min-height: 46px;
+
+    padding: 12px 15px;
+
+    box-sizing: border-box;
+
+    border-radius: 12px;
+
+    color: #dddddd;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    line-height: 1.2;
+
+    text-decoration: none;
+
+    transition:
+      color 0.2s ease,
+      background 0.2s ease;
+  }
+
+
+  .mobile-menu a:hover {
+    color: #ffffff;
+
+    background: #202020;
+  }
+
+
+  /* MOBILE HOME */
+
+  .mobile-menu a:first-child {
+    color: #ffffff;
+
+    background: #383838;
+  }
+
+
+  /* GET STARTED */
+
+  .mobile-menu .mobile-start {
+    margin-top: 6px;
+
+    justify-content: center;
+
+    color: #ffffff;
+
+    background: #303030;
+
+    border: 1px solid #444;
+  }
+
+
+  .mobile-menu .mobile-start:hover {
+    background: #444;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .navbar-wrapper {
+    width: calc(100% - 20px);
+    max-width: calc(100% - 20px);
+
+    top: 10px;
+  }
+
+
+  .navbar {
+    height: 58px;
+    min-height: 58px;
+
+    padding: 0 14px;
+  }
+
+
+  .nav-logo {
+    font-size: 20px;
+  }
+
+
+  .menu-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  .mobile-menu {
+    top: calc(100% + 8px);
+
+    padding: 8px;
+
+    border-radius: 17px;
+  }
+
+
+  .mobile-menu a {
+    min-height: 44px;
+
+    padding: 11px 13px;
+
+    font-size: 13px;
+  }
+}

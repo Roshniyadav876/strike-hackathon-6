@@ -1,0 +1,862 @@
+/* =========================================================
+   STRIKE MEMBERSHIP
+========================================================= */
+
+.membership {
+  position: relative;
+  width: 100%;
+  padding: 136px 40px 90px;
+  background: #000;
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.section-heading {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 88px;
+  text-align: center;
+}
+
+.section-heading > p {
+  margin: 0 0 30px;
+
+  color: #c49a00;
+
+  font-family:
+    "Gilroy",
+    "Inter",
+    sans-serif;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 4px;
+  line-height: 1;
+
+  text-transform: uppercase;
+}
+
+.section-heading h2 {
+  margin: 0 0 30px;
+
+  color: #f2f2f2;
+
+  font-family: "Audiowide", cursive;
+
+  font-size: clamp(52px, 5.5vw, 72px);
+  font-weight: 400;
+
+  line-height: 1.08;
+  letter-spacing: -2px;
+}
+
+.section-heading > span {
+  display: block;
+
+  margin: 0;
+
+  color: #777;
+
+  font-family:
+    "Gilroy",
+    "Inter",
+    "SF Pro Display",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 16px;
+  font-weight: 400;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   MEMBERSHIP GRID
+========================================================= */
+
+.membership-grid {
+  width: 100%;
+  max-width: 1240px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+
+  gap: 34px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.membership-card {
+  position: relative;
+
+  width: 100%;
+  min-width: 0;
+
+  overflow: hidden;
+
+  border-radius: 22px;
+
+  background: #111;
+
+  border: 1px solid #292929;
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.45);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.membership-card:hover {
+  transform: translateY(-4px);
+
+  border-color: #3b3b3b;
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.6);
+}
+
+
+/* =========================================================
+   ULTRA CARD
+========================================================= */
+
+.ultra-card {
+  border-color: #5c4500;
+
+  background:
+    linear-gradient(
+      145deg,
+      #171300 0%,
+      #100e02 50%,
+      #080808 100%
+    );
+}
+
+.ultra-card:hover {
+  border-color: #8a6800;
+}
+
+
+/* =========================================================
+   CARD IMAGE
+========================================================= */
+
+.card-image {
+  position: relative;
+
+  width: 100%;
+  height: 340px;
+
+  overflow: hidden;
+
+  background: #050505;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.card-image::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.02),
+      rgba(0, 0, 0, 0.08)
+    );
+}
+
+
+/* =========================================================
+   IMAGE BADGES
+========================================================= */
+
+.image-badge {
+  position: absolute;
+
+  top: 17px;
+  left: 20px;
+
+  z-index: 5;
+
+  padding: 6px 12px;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  color: #111;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.ultra-badge {
+  left: auto;
+  right: 17px;
+
+  padding: 7px 13px;
+
+  background: rgba(54, 42, 0, 0.92);
+
+  border: 1px solid #967300;
+
+  color: #f0c82d;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.membership-content {
+  padding: 27px 27px 28px;
+}
+
+.plan-label {
+  margin: 0 0 8px;
+
+  color: #777;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  letter-spacing: 2px;
+}
+
+.ultra-card .plan-label {
+  color: #d1a500;
+}
+
+.membership-content h3 {
+  margin: 0 0 9px;
+
+  color: #f4f4f4;
+
+  font-family:
+    "Audiowide",
+    "Inter",
+    sans-serif;
+
+  font-size: 27px;
+  font-weight: 400;
+
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.plan-description {
+  max-width: 520px;
+
+  margin: 0;
+
+  color: #858585;
+
+  font-family:
+    "Gilroy",
+    "Inter",
+    sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+.ultra-card .plan-description {
+  color: #a89c72;
+}
+
+
+/* =========================================================
+   DURATION
+========================================================= */
+
+.duration-title {
+  margin-top: 22px;
+  margin-bottom: 9px;
+
+  color: #777;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+}
+
+.ultra-card .duration-title {
+  color: #b99a32;
+}
+
+.duration-options {
+  width: max-content;
+  min-width: 300px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 4px;
+
+  gap: 0;
+
+  border: 1px solid #292929;
+  border-radius: 11px;
+
+  background: #151515;
+}
+
+.duration-options button {
+  min-width: 91px;
+  height: 34px;
+
+  padding: 0 13px;
+
+  border: 0;
+  border-radius: 8px;
+
+  background: transparent;
+
+  color: #737373;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+  white-space: nowrap;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.duration-options button:hover {
+  color: #ddd;
+}
+
+.duration-options button.active {
+  background: #f1f1f1;
+
+  color: #111;
+
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.duration-options button small {
+  margin-left: 5px;
+
+  color: #777;
+
+  font-size: 8px;
+  font-weight: 600;
+}
+
+.ultra-duration {
+  border-color: #4c3900;
+
+  background: #191500;
+}
+
+.ultra-duration button {
+  color: #997e18;
+}
+
+.ultra-duration button:hover {
+  color: #d4b13a;
+}
+
+.ultra-duration button.active {
+  background: #f3c42d;
+
+  color: #111;
+}
+
+.ultra-duration button.active small {
+  color: #806600;
+}
+
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.price-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 9px;
+
+  margin-top: 25px;
+}
+
+.main-price {
+  display: flex;
+  align-items: baseline;
+
+  gap: 2px;
+}
+
+.main-price .rupee {
+  color: #aaa;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.main-price strong {
+  color: #f5f5f5;
+
+  font-family:
+    "Gilroy",
+    "Inter",
+    sans-serif;
+
+  font-size: 43px;
+  font-weight: 800;
+
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.ultra-card .main-price .rupee {
+  color: #bd8e00;
+}
+
+.price-row del {
+  color: #555;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 12px;
+}
+
+.discount {
+  padding: 5px 9px;
+
+  border: 1px solid #3d3d3d;
+  border-radius: 6px;
+
+  background: #292929;
+
+  color: #f1f1f1;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.ultra-card .discount {
+  border-color: #826500;
+
+  background: #392d00;
+
+  color: #e7bd26;
+}
+
+.popular-price {
+  padding: 5px 9px;
+
+  border-radius: 6px;
+
+  background: #eee;
+
+  color: #111;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.ultra-card .popular-price {
+  background: #f1bf20;
+
+  color: #111;
+}
+
+
+/* =========================================================
+   PAYMENT INFO
+========================================================= */
+
+.payment-info {
+  margin: 7px 0 0;
+
+  color: #555;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 10px;
+}
+
+.ultra-card .payment-info {
+  color: #817545;
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.feature-list {
+  list-style: none;
+
+  margin: 52px 0 28px;
+
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  color: #c2c2c2;
+
+  font-family:
+    "Gilroy",
+    "Inter",
+    sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.4;
+}
+
+.feature-list li::before {
+  content: "✓";
+
+  width: 21px;
+  height: 21px;
+
+  flex: 0 0 21px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #383838;
+  border-radius: 50%;
+
+  background: #202020;
+
+  color: #aaa;
+
+  font-size: 10px;
+}
+
+.ultra-card .feature-list li {
+  color: #d4d0bf;
+}
+
+.ultra-card .feature-list li::before {
+  border-color: #685300;
+
+  background: #2a230b;
+
+  color: #d5ad18;
+}
+
+.highlight-feature {
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   ORIGINAL BUTTON
+========================================================= */
+
+.plan-button {
+  width: 100%;
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  border: 1px solid #444;
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #292929,
+      #1b1b1b
+    );
+
+  color: #f4f4f4;
+
+  font-family:
+    "Gilroy",
+    "Inter",
+    sans-serif;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.plan-button:hover {
+  transform: translateY(-2px);
+
+  border-color: #666;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.plan-button span {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   ULTRA BUTTON
+========================================================= */
+
+.ultra-button {
+  border-color: #e1ae16;
+
+  background:
+    linear-gradient(
+      90deg,
+      #f3c42d,
+      #e4ac12
+    );
+
+  color: #111;
+}
+
+.ultra-button:hover {
+  border-color: #ffd34d;
+
+  box-shadow:
+    0 10px 30px rgba(225, 174, 20, 0.18);
+}
+
+
+/* =========================================================
+   PRICING NOTE
+========================================================= */
+
+.pricing-note {
+  margin: 30px 0 0;
+
+  text-align: center;
+
+  color: #333;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+  .membership {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .membership-grid {
+    gap: 20px;
+  }
+
+  .card-image {
+    height: 300px;
+  }
+
+  .membership-content {
+    padding: 23px;
+  }
+
+  .main-price strong {
+    font-size: 38px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .membership {
+    padding: 90px 16px 65px;
+  }
+
+  .section-heading {
+    margin-bottom: 55px;
+  }
+
+  .section-heading > p {
+    margin-bottom: 22px;
+
+    font-size: 8px;
+    letter-spacing: 3px;
+  }
+
+  .section-heading h2 {
+    margin-bottom: 24px;
+
+    font-size: 42px;
+
+    line-height: 1.05;
+    letter-spacing: -1px;
+  }
+
+  .section-heading > span {
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+  .membership-grid {
+    width: 100%;
+    max-width: 600px;
+
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+  }
+
+  .card-image {
+    height: 260px;
+  }
+
+  .membership-content {
+    padding: 21px;
+  }
+
+  .membership-content h3 {
+    font-size: 23px;
+  }
+
+  .duration-options {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .duration-options button {
+    flex: 1;
+    min-width: 0;
+
+    padding: 0 8px;
+  }
+
+  .price-row {
+    gap: 7px;
+  }
+
+  .main-price strong {
+    font-size: 32px;
+  }
+
+  .main-price .rupee {
+    font-size: 17px;
+  }
+
+  .feature-list {
+    margin-top: 38px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+  .membership {
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+
+  .section-heading h2 {
+    font-size: 38px;
+  }
+
+  .card-image {
+    height: 220px;
+  }
+
+  .membership-content {
+    padding: 18px;
+  }
+
+  .main-price strong {
+    font-size: 29px;
+  }
+
+  .discount,
+  .popular-price {
+    font-size: 9px;
+    padding: 5px 7px;
+  }
+
+  .feature-list li {
+    font-size: 12px;
+  }
+}
